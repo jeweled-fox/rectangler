@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+	<title>Rectangler</title>
+	<link rel="icon" href="f.png">
+</head>
+
+<style>
+@font-face {
+	src:url(comic.ttf);
+	font-family:comicsans;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+</style>
+
+<body style="margin:0px;overflow:hidden;font-family:arial;background-color:#d9d9d9;">
+<canvas id="c" width="0px" height="0px" style="background-color:white;cursor:;"></canvas>
+
+<div id="controlpanel" style="width:200px;height:380px;overflow-y:scroll;position:relative;background-color:#e3e3e3;top:-380px;left:0px;border-style:outset;text-align:center;">
+<h2>Tools</h2>	
+<button id="undo" disabled onclick="undo(this)">⎌</button>
+<br><button onclick="makerect(this)">Make rectangle</button>
+<p>Pos1: <span id="selectedx">0</span>,
+<span id="selectedy">0</span></p>
+
+<p>Pos2: <span id="selectedx2">0</span>,
+<span id="selectedy2">0</span></p>
+
+Angle: <input type="number" style="width:23px;" min="0" max="360" value="0" id="angle"> °<br>
+
+<br>Fill<input type="radio" id="fill" name="filled" value=true>
+<br>Outline<input type="radio" id="outlined" name="filled" checked value=false>
+
+<br><br>Color <input type="color" id="color">
+
+<br><br><button disabled id="createbutton">Create</button>
+<p><a href="javascript:saveimg()" style="color:red;">Save image</a></p>
+</div>
+
+<noscript><p>JavaScript needs to be enabled for this site to function properly.</p></noscript>
+
+</body>
+<script src="i.js"></script>
