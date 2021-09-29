@@ -35,6 +35,7 @@ function undo(e) {
 		actionimg.src = actionarray[actionarray.length - 1]
 		document.body.appendChild(actionimg)
 		actionimg.onload = () => {
+			console.log("actionimg loaded")
 			ctx.drawImage(actionimg, 0, 0)
 			actionimg.remove()
 		}
