@@ -53,14 +53,17 @@ document.fonts.load("30px comicsans").then(() => {
 		iconimg.onload = () => {
 			ctx.drawImage(iconimg, 10, 10, 50, 50)
 			iconimg.remove()
-		}
+		
 
 		ctx.font = "30px comicsans"
 		ctx.fillStyle = "gray"
 		ctx.fillText(watermark, 70,  50)
 		ctx.strokeStyle = "gray"
 		ctx.strokeText(watermark, 69,  50)
+		}
 	})
+
+appendactionarray()
 
 document.addEventListener('keydown', function(e) {
 	if (e.key == "Enter") {
@@ -159,7 +162,7 @@ function saveimg() {
 		iconimg.onload = () => {
 			ctx.drawImage(iconimg, 10, 10, 50, 50)
 			iconimg.remove()
-		}
+		
 
 		ctx.font = "30px comicsans"
 		ctx.fillStyle = "gray"
@@ -172,5 +175,6 @@ function saveimg() {
 		invisiblelink.href = dataurl
 		invisiblelink.download = "Drawing"
 		invisiblelink.click()
+		}
 	})
 }
