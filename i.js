@@ -63,8 +63,6 @@ document.fonts.load("30px comicsans").then(() => {
 		}
 	})
 
-appendactionarray()
-
 document.addEventListener('keydown', function(e) {
 	if (e.key == "Enter") {
 		if (cr.disabled == false) {
@@ -178,3 +176,6 @@ function saveimg() {
 		}
 	})
 }
+
+console.log("appending first")
+appendactionarray()
